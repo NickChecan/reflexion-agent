@@ -8,6 +8,9 @@ The goal of this reflexion agent is to create a very detailed article about a to
 - Tavily (Search Engine)
 - LangSmith
 
+#### Prompting Concepts:
+- **Ouput Parser** to get structure outputs
+
 ### Installation
 After initialize the poetry project, you can add the following dependencies:
 ```sh
@@ -23,3 +26,4 @@ LANGCHAIN_API_KEY=<API Key from langsmith>
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=<name that will show up in the langsmith dashboard>
 ```
+
