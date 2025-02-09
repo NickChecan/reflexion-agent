@@ -2,6 +2,25 @@
 
 The goal of this reflexion agent is to create a very detailed article about a topic we will provide.
 
+```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	draft(draft)
+	execute_tools(execute_tools)
+	revise(revise)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> draft;
+	draft --> execute_tools;
+	execute_tools --> revise;
+	revise -.-> draft;
+	revise -.-> execute_tools;
+	revise -.-> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+
 ### Tools for this project
 - OpenAI GPT4 Turbo
 - Function Calling
